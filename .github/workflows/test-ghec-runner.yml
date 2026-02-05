@@ -28,6 +28,6 @@ jobs:
     steps:
     - name: Dump GitHub context
       run: |
-        #echo "GITHUB_CONTEXT: ${{ toJSON(github) }}"
+        ##echo "GITHUB_CONTEXT: ${{ toJSON(github) }}"
         echo "${{ matrix.os }}"
         echo "${{ matrix.version }}"
