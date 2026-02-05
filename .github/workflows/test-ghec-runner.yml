@@ -21,7 +21,13 @@ jobs:
   test_job:
     name: test job
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [16, 18, 20] # Define the matrix variable(s)
+        os: [ubuntu-latest, windows-latest]
     steps:
     - name: Dump GitHub context
       run: |
-        echo "GITHUB_CONTEXT: ${{ toJSON(github) }}"
+        #echo "GITHUB_CONTEXT: ${{ toJSON(github) }}"
+        echo "${{ matrix.os }}"
+        echo "${{ matrix.version }}"
