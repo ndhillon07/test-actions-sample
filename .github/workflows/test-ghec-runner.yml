@@ -4,6 +4,10 @@ name: test-runner
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+     inputs:
+      test_input_1:
+        type: string
+        default: "test_input_1_value"
   push:
     paths-ignore:
       - 'docs/**'
