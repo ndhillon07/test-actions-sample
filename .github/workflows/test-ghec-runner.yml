@@ -18,8 +18,6 @@ jobs:
     name: test job
     runs-on: ubuntu-latest
     steps:
-      - name: "test"
-        id: test
-        run: |
-          echo "hello world"
-        shell: bash
+    - name: Dump GitHub context
+      run: |
+        echo "GITHUB_CONTEXT: ${{ toJSON(github) }}"
